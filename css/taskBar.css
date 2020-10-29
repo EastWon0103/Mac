@@ -1,0 +1,18 @@
+#taskBar{
+    height:25px;
+    align-items: center;
+    background-color:rgba(255,255,255,0.4);
+    display:flex;
+}
+.taskBarItem{
+    font-size:0.97rem;
+    display: flex;
+    justify-content: center;
+    flex-basis:50px;
+}
+.taskBarItem img{
+    height:17px;
+    width:auto;
+}
+.taskBarItem:nth-child(8){flex-grow: 10;} /* Empty Space */
+.taskBarItem:nth-child(11){flex-basis:100px;} /* clock Space */

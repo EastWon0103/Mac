@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hello!</title>
+    <meta charset="utf-8">
+    <style>
+        @import url('css/background.css');
+        @import url('css/taskBar.css');
+
+        #dock, #wrap{
+            position: fixed;
+            right:20%;
+            left:20%;
+            margin:0 auto;
+            width:60%;
+            height:75px;
+            border-radius: 10px;
+        }
+        #dock{
+            display:flex;
+            align-items: center;
+            justify-content: space-around;
+            bottom: -75px;
+            background-color:rgba(255,255,255,0.4);
+            transition: all 0.5s ease-in-out;
+        }
+        #wrap{bottom:0px;}
+        #dock.active{transform: translateY(-75px);}
+        #dock span{display: flex;}
+        #dock img{
+            width:60px;
+            height:60px;
+            transition:all 0.3s ease-in-out;
+        }
+        #dock img:hover{transform:scale(1.2);}
+        #dock img:active{filter:brightness(0.5);}
+    </style>
+</head>
+<body>
+    <div id="taskBar">
+        <div class="taskBarItem"><img src="img/appleIcon.jpg"></div>
+        <div class="taskBarItem">Messages</div>
+        <div class="taskBarItem">Files</div>
+        <div class="taskBarItem">Image</div>
+        <div class="taskBarItem">Edit</div>
+        <div class="taskBarItem">View</div>
+        <div class="taskBarItem">Help</div>
+        <div class="taskBarItem"></div>
+        <div class="taskBarItem"><img src="img/batteryIcon.png"></div>
+        <div class="taskBarItem"><img src="img/wifiIcon.png"></div>
+        <div class="taskBarItem">00:00 AM</div>
+    </div>
+
+    <div id="wrap">
+    <div id="dock">
+        <span> <img src="img/safariIcon.png"></span>
+        <span> <img src="img/settingIcon.png"></span>
+        <span> <img src="img/iMessageIcon.png"></span>
+        <span> <img src="img/weatherIcon.png"></span>
+        <span> <img src="img/informationIcon.png"></span>
+        <span> <img src="img/papagoIcon.png"></span>
+        <span> <img src="img/calendarIcon.png"></span>
+        <span> <img src="img/metroIcon.png"></span>
+    </div>
+    </div>
+
+    <script src="js/clock.js"></script>
+    <script src="js/dockAnimation.js"></script>
+    <script src="js/link.js"></script>
+</body>
+</html>
