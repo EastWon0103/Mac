@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculator</title>
+    <meta charset="utf-8">
+    <style>
+        html,body{
+            margin:0;
+            padding:0;
+            width:100%;
+            height:100%;
+            overflow:hidden;
+        }
+        #buttons{border-spacing: 5px;}
+        #buttons td{
+            background-color: #E8E5E5;
+            text-align: center;
+            width:60px;
+            height:60px;
+            border-radius: 4px;
+            border:1px solid gray;
+            transition:all 0.1s ease-in-out;
+        }
+        #buttons td:hover{
+            box-shadow: 1px 1px 1px gray;
+        }
+        #buttons td:active{filter:brightness(80%);}
+        #calculatorDisplay{
+            border:1px solid gray;
+            border-radius: 4px;
+            margin-left:5px;
+            width:407px;
+            height:37px;
+            font-size: 1.5rem;
+            overflow: auto;
+        }
+        #calculatorDisplay::-webkit-scrollbar{height:5px;}
+        #calculatorDisplay::-webkit-scrollbar-thumb{
+            background-color: gray;
+            border-radius: 3px;
+        }
+        #calculatorDisplay::-webkit-scrollbar-track{background-color:white;}
+        #errorDisplay{margin-left:5px;}
+        
+        /* resultdisplay 계산값이 계속 추가되면 어떻게 되는지 필요 */
+        #resultDisplay{
+            border:1px solid gray;
+            border-radius: 4px;
+            margin:5px;
+            width:407px;
+            height:120px;
+            font-size: 1.3rem;
+            overflow: auto;
+        }
+        #resultDisplay table{border-collapse: collapse;}
+        #resultDisplay tr{
+            border-bottom:1px solid gray;
+        }
+        #resultDisplay td:nth-child(1){width: 230px;}
+        #resultDisplay td:nth-child(2){width: 30px; text-align: center;}
+        #resultDisplay td:nth-child(3){width: 130px; text-align: right;}
+
+        #resultDisplay::-webkit-scrollbar{width:5px;}
+        #resultDisplay::-webkit-scrollbar-thumb{
+            background-color: gray;
+            border-radius: 3px;
+        }
+        #resultDisplay::-webkit-scrollbar-track{background-color:white;}
+
+    </style>
+</head>
+<body>
+    <div>
+        <div id="resultDisplay">
+            <table>
+                <tr>
+                    <td>123132+2423</td><td>=</td><td>125555</td>
+                </tr>
+                <tr>
+                    <td>123132+2423</td><td>=</td><td>125555</td>
+                </tr>
+                <tr>
+                    <td>123132+2423</td><td>=</td><td>125555</td>
+                </tr>
+                <tr>
+                    <td>123132+2423</td><td>=</td><td>125555</td>
+                </tr>
+            </table>
+        </div>
+        <div id="calculatorDisplay">
+            999999999999+9999999999999999999999999999
+        </div>
+        <div id="errorDisplay">error</div>
+        <table id="buttons"> 
+            <tr>
+                <td>7</td>
+                <td>8</td>
+                <td>9</td>
+                <td>&#247;</td>
+                <td>&#x2B05;</td>
+                <td>C</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+                <td>x</td>
+                <td>(</td>
+                <td>)</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>-</td>
+                <td>x&#178;</td>
+                <td>&radic;</td>
+            </tr>
+            <tr>
+                <td>0</td>
+                <td>.</td>
+                <td>%</td>
+                <td>+</td>
+                <td colspan="2">=</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
