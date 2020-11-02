@@ -12,7 +12,7 @@
             right:20%;
             left:20%;
             margin:0 auto;
-            width:60%;
+            width:65%;
             height:75px;
             border-radius: 10px;
         }
@@ -26,14 +26,31 @@
         }
         #wrap{bottom:0px;}
         #dock.active{transform: translateY(-75px);}
-        #dock span{display: flex;}
+        #dock div{display: flex;}
         #dock img{
             width:60px;
             height:60px;
             transition:all 0.3s ease-in-out;
+            object-fit: cover;
         }
         #dock img:hover{transform:scale(1.2);}
         #dock img:active{filter:brightness(0.5);}
+        .modifyIcon:hover{transform:scale(1.2);}
+        .modifyIcon:active{filter:brightness(0.5);}
+        .modifyIcon{
+            height:60px;
+            width:60px;
+            overflow:hidden;
+            border-radius: 10px;
+            transition:all 0.3s ease-in-out;
+            
+        }
+        .modifyIcon:nth-child(1) img{
+            height:60px;
+            margin-left:-25%;
+        }
+        .modifyIcon:nth-child(2) img{height:60px;}
+        .modifyIcon > img:hover{transform: unset !important;}
     </style>
 </head>
 <body>
@@ -53,14 +70,14 @@
 
     <div id="wrap">
     <div id="dock">
-        <span> <img src="img/safariIcon.png"></span>
-        <span> <img src="img/settingIcon.png"></span>
-        <span> <img src="img/iMessageIcon.png"></span>
-        <span> <img src="img/weatherIcon.png"></span>
-        <span> <img src="img/calculatorIcon.png"></span>
-        <span> <img src="img/papagoIcon.png"></span>
-        <span> <img src="img/calendarIcon.png"></span>
-        <span> <img src="img/metroIcon.png"></span>
+        <div> <img src="img/safariIcon.png"></div>
+        <div> <img src="img/settingIcon.png"></div>
+        <div> <img src="img/iMessageIcon.png"></div>
+        <div> <img src="img/weatherIcon.png"></div>
+        <div> <img src="img/calculatorIcon.png"></div>
+        <div class="modifyIcon"> <img src="img/papagoIcon.jpg"></div>
+        <div> <img src="img/calendarIcon.png"></div>
+        <div class="modifyIcon"> <img src="img/metroIcon.png"></div>
     </div>
     </div>
 
