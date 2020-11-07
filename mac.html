@@ -6,7 +6,8 @@
     <style>
         @import url('css/background.css');
         @import url('css/taskBar.css');
-
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
         #dock, #wrap{
             position: fixed;
             right:20%;
@@ -43,7 +44,6 @@
             overflow:hidden;
             border-radius: 10px;
             transition:all 0.3s ease-in-out;
-            
         }
         .modifyIcon:nth-child(1) img{
             height:60px;
@@ -51,6 +51,38 @@
         }
         .modifyIcon:nth-child(2) img{height:60px;}
         .modifyIcon > img:hover{transform: unset !important;}
+        #calendarWrap{
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+            background-color:white;
+            width:60px;
+            height:60px;
+            border-radius: 10px;
+            overflow:hidden;
+            text-align: center;
+            transition:all 0.3s ease-in-out;
+        }
+        #DOW{
+            display:flex;
+            justify-content: center;
+            font-family: 'Montserrat', sans-serif;
+            color:white;
+            line-height: 15px;
+            background-color:red;
+            height:15px;
+            width:60px;
+            font-size: 0.4rem;
+        }
+        #days{
+            display:flex;
+            font-family: 'Montserrat', sans-serif;
+            font-size:2rem;
+            line-height:45px;
+        }
+        #calendarWrap:hover{transform:scale(1.2);}
+        #calendarWrap:active{filter:brightness(0.5);}
+
     </style>
 </head>
 <body>
@@ -76,7 +108,10 @@
         <div> <img src="img/weatherIcon.png"></div>
         <div> <img src="img/calculatorIcon.png"></div>
         <div class="modifyIcon"> <img src="img/papagoIcon.jpg"></div>
-        <div> <img src="img/calendarIcon.png"></div>
+        <div id="calendarWrap">
+            <div id="DOW">MON</div>
+            <div id="days">0</div>
+        </div>
         <div class="modifyIcon"> <img src="img/metroIcon.png"></div>
     </div>
     </div>
@@ -84,5 +119,6 @@
     <script src="js/clock.js"></script>
     <script src="js/dockAnimation.js"></script>
     <script src="js/link.js"></script>
+    <script src="js/calendarIcon.js"></script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-const iconList = document.querySelectorAll("#dock img");
+const iconList = document.querySelectorAll("#dock img, #calendarWrap");
 
 function safari(event){
     window.open("http://www.google.com",  
